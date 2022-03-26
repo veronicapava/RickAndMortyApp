@@ -1,11 +1,14 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
+import Character from './Character'
 
 const Card = () => {
+
+  const [characters, setCharacters] = useState([])
 
   const fetchCharacter = () =>{
     fetch(`${process.env.REACT_APP_API_URL}/character`)
     .then((response) => response.json())  
-    .then(data => console.log(data.results))
+    .then(data => setCharacters(data.results))
   }
 
   useEffect(() => {
@@ -13,12 +16,11 @@ const Card = () => {
   }, [])
  
   return (
-    <div>
+    <div className="container">
       <h1>Personajes</h1>
-        <h5>Este es un personaje</h5>
-        {
-
-        }
+        <div className="container">
+          <Character characters={characters}/>
+        </div>
     </div>
   )
 }
