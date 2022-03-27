@@ -8,15 +8,23 @@ const inicialStore = {
 const rootReducer = (state = inicialStore, { type, character }) => {
 
     if (type == ADD_TO_FAVORITES) {
-        if (state.favoritesCharacter.find(char => char.id === character.id)) return state
-        state.favoritesCharacter.push(character)
-        return state
+
+        let newFavo = [...state.favoritesCharacter, character]
+
+        return {
+            ...state,
+            favoritesCharacter: newFavo
+        }
 
     }
 
     if (type == DELETE_FROM_FAVORITES) {
-        state.favoritesCharacter = state.favoritesCharacter.filter(char => char.id != character.id)
-        return state
+        let newFavo = state.favoritesCharacter.filter(char => char.id != character.id)
+        return {
+            ...state,
+            favoritesCharacter: newFavo
+        }
+
     }
 
     return state

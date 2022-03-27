@@ -1,7 +1,5 @@
-import React from "react";
 import Character from "./Character";
 import { connect } from "react-redux";
-import { addToFavorites, deleteFromFavorites } from "../redux/actionCreator";
 
 const Favorites = ({ favoritesCharacter }) => {
   return (

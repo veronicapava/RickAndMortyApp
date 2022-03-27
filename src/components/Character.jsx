@@ -2,12 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { addToFavorites, deleteFromFavorites } from "../redux/actionCreator";
 
-const Character = ({
-  character,
-  favoritesCharacter,
-  addCharacterToFavorites,
-  deleteCharacterFromFavorites,
-}) => {
+const Character = ({ character, favoritesCharacter, addCharacterToFavorites, deleteCharacterFromFavorites }) => {
   const [liked, setLiked] = useState(false);
 
   const handleClick = (char) => {
@@ -16,9 +11,7 @@ const Character = ({
   };
 
   useEffect(() => {
-    let iamFavorite = favoritesCharacter.some(
-      (char) => char.id == character.id
-    );
+    let iamFavorite = favoritesCharacter.some((char) => char.id == character.id);
     if (iamFavorite) {
       setLiked(true);
     }
