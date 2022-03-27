@@ -18,19 +18,23 @@ const Character = ({ character, favoritesCharacter, addCharacterToFavorites, del
   }, []);
 
   return (
-    <div className="col-4 mb-4">
-      <div className="card">
-        <img src={character.image} alt="" />
+    <div className="col-4 mb-4 btn btn-outline-primary">
+      <div className="card-img-top">
+        <img src={character.image} alt="rickandmortycharacter" />
       </div>
       <div className="card-body">
-        <h3>{character.name}</h3>
-        <div>
-          <button className="button" onClick={() => handleClick(character)}>
-            {liked ? "❤️" : "🤍"}
-          </button>
+        <div className="card-text form-control-plaintext">
+          <h3>{character.name}</h3>
+          <br />
+          <div>
+            <button className="btn btn-outline-secondary" onClick={() => handleClick(character)}>
+              {liked ? "❤️" : "🤍"}
+            </button>
+          </div>
+          <br></br>
+          <p>Status: {character.status}</p>
+          <p>Specie: {character.species}</p>
         </div>
-        <p>Status: {character.status}</p>
-        <p>Specie: {character.species}</p>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Character from "./Character";
 import Pagination from "./Pagination";
 
 const Searcher = () => {
-  const [state, setState] = useState("annie");
+  const [state, setState] = useState("");
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
 
@@ -30,18 +30,20 @@ const Searcher = () => {
   return (
     <div className="navbar-brand my-5">
       <div className="container mt-2">
-        <h4>Search for a character</h4>
-        <input value={state} onChange={(e) => setState(e.target.value)} />
-        <button onClick={search}>Search</button>
+        <h4 className="form-label text-uppercase text-center mb-5">Search for a character</h4>
+
+        <input className="form-control mb-3" value={state} onChange={(e) => setState(e.target.value)} />
+        <br />
+        <div className="d-grid gap-2">
+          <button className="btn btn-lg btn-secondary" onClick={search}>
+            Search
+          </button>
+        </div>
+
         <div className="container mt-5">
           {characters ? (
             <>
-              <Pagination
-                prev={info.prev}
-                next={info.next}
-                onPrevious={onPrevious}
-                onNext={onNext}
-              />
+              <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext} />
 
               <div className="row">
                 {characters.map((char) => (
@@ -49,15 +51,13 @@ const Searcher = () => {
                 ))}
               </div>
 
-              <Pagination
-                prev={info.prev}
-                next={info.next}
-                onPrevious={onPrevious}
-                onNext={onNext}
-              />
+              <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext} />
             </>
           ) : (
-            <h1>Sorry, not characters found</h1>
+            <h1 className="alert alert-dismissible alert-warning">Sorry, not characters found</h1>
+          )}
+          {characters.length == 0 && (
+            <img className="rounded mx-auto d-block" src={process.env.PUBLIC_URL + "img/rickmorty.jpg"} alt="logo" />
           )}
         </div>
       </div>

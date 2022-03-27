@@ -29,14 +29,9 @@ const Characters = () => {
 
   return (
     <div className="container my-5">
-      <h1>Characters</h1>
+      <h1 className="text-uppercase text-center">Characters</h1>
       <div className="container mt-5">
-        <Pagination
-          prev={info.prev}
-          next={info.next}
-          onPrevious={onPrevious}
-          onNext={onNext}
-        />
+        <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext} />
 
         <div className="row">
           {characters.map((char) => (
@@ -44,12 +39,7 @@ const Characters = () => {
           ))}
         </div>
 
-        <Pagination
-          prev={info.prev}
-          next={info.next}
-          onPrevious={onPrevious}
-          onNext={onNext}
-        />
+        <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext} />
       </div>
     </div>
   );

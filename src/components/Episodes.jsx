@@ -32,20 +32,10 @@ const Episodes = () => {
   return (
     <div className="container my-5">
       <div className="row">
-        <h1>Episodes</h1>
-        <Pagination
-          prev={info.prev}
-          next={info.next}
-          onPrevious={onPrevious}
-          onNext={onNext}
-        />
+        <h1 className="text-uppercase text-center mb-5">Episodes</h1>
+        <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext} />
         <Episode episodes={episodes} />
-        <Pagination
-          prev={info.prev}
-          next={info.next}
-          onPrevious={onPrevious}
-          onNext={onNext}
-        />
+        <Pagination prev={info.prev} next={info.next} onPrevious={onPrevious} onNext={onNext} />
       </div>
     </div>
   );
