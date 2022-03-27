@@ -4,7 +4,7 @@ import Character from "./Character";
 import Pagination from "./Pagination";
 
 const Searcher = () => {
-  const [state, setState] = useState("");
+  const [state, setState] = useState("annie");
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
 
@@ -42,7 +42,13 @@ const Searcher = () => {
                 onPrevious={onPrevious}
                 onNext={onNext}
               />
-              <Character characters={characters} />
+
+              <div className="row">
+                {characters.map((char) => (
+                  <Character character={char} key={char.id} />
+                ))}
+              </div>
+
               <Pagination
                 prev={info.prev}
                 next={info.next}
