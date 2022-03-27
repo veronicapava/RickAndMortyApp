@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Character from "./Character";
 import Pagination from "./Pagination";
+import Searcher from "./Searcher";
 
-const Card = () => {
+const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
 
@@ -30,6 +31,7 @@ const Card = () => {
 
   return (
     <div className="container my-5">
+      <Searcher />
       <h1>Personajes</h1>
       <div className="container mt-5">
         <Pagination
@@ -50,4 +52,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Characters;

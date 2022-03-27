@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Navbar = () => {
+const Searcher = () => {
   const [state, setState] = useState();
   return (
     <div className="navbar-brand my-5">
@@ -12,4 +12,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Searcher;
