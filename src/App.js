@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Characters from './components/Characters';
 import Episodes from './components/Episodes';
 import Searcher from './components/Searcher';
+import Favorites from './components/Favorites';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Characters />} />
             <Route path="/episodes" element={<Episodes />} />
             <Route path="/searcher" element={<Searcher />} />
+            <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </BrowserRouter>
       </Provider>
