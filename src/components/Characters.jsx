@@ -21,7 +21,7 @@ const Card = () => {
     fetchCharacter(info.prev);
   };
   const onNext = () => {
-    console.log(fetchCharacter(info.next));
+    fetchCharacter(info.next);
   };
 
   useEffect(() => {
