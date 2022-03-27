@@ -1,13 +1,28 @@
 import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import { addToFavorites, deleteFromFavorites } from "../redux/actionCreator";
 
-const Character = ({ character }) => {
+const Character = ({
+  character,
+  favoritesCharacter,
+  addCharacterToFavorites,
+  deleteCharacterFromFavorites,
+}) => {
   const [liked, setLiked] = useState(false);
-  const [likedCharacters, saveLikedCharacter] = useState({});
 
   const handleClick = (char) => {
     setLiked(!liked);
-    !liked ? saveLikedCharacter(char) : saveLikedCharacter({});
+    !liked ? addCharacterToFavorites(char) : deleteCharacterFromFavorites(char);
   };
+
+  useEffect(() => {
+    let iamFavorite = favoritesCharacter.some(
+      (char) => char.id == character.id
+    );
+    if (iamFavorite) {
+      setLiked(true);
+    }
+  }, []);
 
   return (
     <div className="col-4 mb-4">
@@ -28,4 +43,18 @@ const Character = ({ character }) => {
   );
 };
 
-export default Character;
+const mapStateToProps = (state) => ({
+  favoritesCharacter: state.favoritesCharacter,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addCharacterToFavorites(character) {
+    dispatch(addToFavorites(character));
+  },
+
+  deleteCharacterFromFavorites(character) {
+    dispatch(deleteFromFavorites(character));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Character);
