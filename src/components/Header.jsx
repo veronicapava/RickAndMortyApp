@@ -8,6 +8,7 @@ const Header = () => {
         <h1>Rick and Morty App</h1>
         <Link to="/">Characters</Link>
         <Link to="/episodes">Episodes</Link>
+        <Link to="/searcher">Searcher</Link>
         <Link to="/favorites">Favorites</Link>
       </div>
     </div>

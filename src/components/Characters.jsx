@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Character from "./Character";
 import Pagination from "./Pagination";
-import Searcher from "./Searcher";
 import fetchCharacter from "../utils/index";
 
 const Characters = () => {
@@ -30,7 +29,6 @@ const Characters = () => {
 
   return (
     <div className="container my-5">
-      <Searcher />
       <h1>Characters</h1>
       <div className="container mt-5">
         <Pagination
