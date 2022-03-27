@@ -32,7 +32,7 @@ const Characters = () => {
   return (
     <div className="container my-5">
       <Searcher />
-      <h1>Personajes</h1>
+      <h1>Characters</h1>
       <div className="container mt-5">
         <Pagination
           prev={info.prev}

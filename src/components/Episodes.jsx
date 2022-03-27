@@ -30,7 +30,7 @@ const Episodes = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container my-5">
       <div className="row">
         <h1>Episodes</h1>
         <Pagination
