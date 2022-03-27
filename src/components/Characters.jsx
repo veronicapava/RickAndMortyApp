@@ -2,31 +2,30 @@ import { useEffect, useState } from "react";
 import Character from "./Character";
 import Pagination from "./Pagination";
 import Searcher from "./Searcher";
+import fetchCharacter from "../utils/index";
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
 
-  const baseUrl = `${process.env.REACT_APP_API_URL}/character`;
+  const baseUrl = `${process.env.REACT_APP_API_URL}/`;
+  const endpoint = `character`;
 
-  const fetchCharacter = (url) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setCharacters(data.results);
-        setInfo(data.info);
-      });
+  const onPrevious = async () => {
+    let data = await fetchCharacter(info.prev);
+    setCharacters(data.results);
+    setInfo(data.info);
+  };
+  const onNext = async () => {
+    let data = await fetchCharacter(info.next);
+    setCharacters(data.results);
+    setInfo(data.info);
   };
 
-  const onPrevious = () => {
-    fetchCharacter(info.prev);
-  };
-  const onNext = () => {
-    fetchCharacter(info.next);
-  };
-
-  useEffect(() => {
-    fetchCharacter(baseUrl);
+  useEffect(async () => {
+    let data = await fetchCharacter(baseUrl + endpoint);
+    setCharacters(data.results);
+    setInfo(data.info);
   }, []);
 
   return (
