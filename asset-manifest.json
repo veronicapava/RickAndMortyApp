@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/RickAndMortyApp/static/js/main.38dc09ee.js",
+    "index.html": "/RickAndMortyApp/index.html",
+    "main.38dc09ee.js.map": "/RickAndMortyApp/static/js/main.38dc09ee.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.38dc09ee.js"
+  ]
+}
