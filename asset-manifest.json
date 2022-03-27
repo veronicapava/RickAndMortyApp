@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://veronicapava.github.io/static/js/main.58b36ccc.js",
+    "main.js": "https://veronicapava.github.io/static/js/main.a5c9ac09.js",
     "index.html": "https://veronicapava.github.io/index.html",
-    "main.58b36ccc.js.map": "https://veronicapava.github.io/static/js/main.58b36ccc.js.map"
+    "main.a5c9ac09.js.map": "https://veronicapava.github.io/static/js/main.a5c9ac09.js.map"
   },
   "entrypoints": [
-    "static/js/main.58b36ccc.js"
+    "static/js/main.a5c9ac09.js"
   ]
 }
