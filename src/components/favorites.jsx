@@ -11,7 +11,7 @@ const Favorites = ({ favoritesCharacter }) => {
             <Character character={char} key={char.id} />
           ))}
           {favoritesCharacter.length == 0 && (
-            <img className="rounded mx-auto d-block" src={process.env.PUBLIC_URL + "img/rickmorty2.jpg"} alt="logo" />
+            <img className="rounded mx-auto d-block" src={process.env.PUBLIC_URL + "/img/rickmorty2.jpg"} alt="logo" />
           )}
         </div>
       </div>
