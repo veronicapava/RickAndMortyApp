@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Provider store={store}>
-        <BrowserRouter basename={"/RickAndMortyApp"}>
+        <BrowserRouter basename={"/RickAndMortyApp/"}>
           <Header />
           <Routes>
             <Route path="/" element={<Characters />} />

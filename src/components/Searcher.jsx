@@ -57,7 +57,7 @@ const Searcher = () => {
             <h1 className="alert alert-dismissible alert-warning">Sorry, not characters found</h1>
           )}
           {characters.length == 0 && (
-            <img className="rounded mx-auto d-block" src={process.env.PUBLIC_URL + "img/rickmorty.jpg"} alt="logo" />
+            <img className="rounded mx-auto d-block" src={process.env.PUBLIC_URL + "/img/rickmorty.jpg"} alt="logo" />
           )}
         </div>
       </div>
