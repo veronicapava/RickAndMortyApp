@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/RickAndMortyApp/static/js/main.3113f510.js",
+    "main.js": "/RickAndMortyApp/static/js/main.f2b3567c.js",
     "index.html": "/RickAndMortyApp/index.html",
-    "main.3113f510.js.map": "/RickAndMortyApp/static/js/main.3113f510.js.map"
+    "main.f2b3567c.js.map": "/RickAndMortyApp/static/js/main.f2b3567c.js.map"
   },
   "entrypoints": [
-    "static/js/main.3113f510.js"
+    "static/js/main.f2b3567c.js"
   ]
 }
