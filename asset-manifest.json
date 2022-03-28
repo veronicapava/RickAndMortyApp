@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://veronicapava.github.io/RickAndMortyApp/static/js/main.309cc75e.js",
-    "index.html": "https://veronicapava.github.io/RickAndMortyApp/index.html",
-    "main.309cc75e.js.map": "https://veronicapava.github.io/RickAndMortyApp/static/js/main.309cc75e.js.map"
+    "main.js": "/RickAndMortyApp/static/js/main.ccc9e29e.js",
+    "index.html": "/RickAndMortyApp/index.html",
+    "main.ccc9e29e.js.map": "/RickAndMortyApp/static/js/main.ccc9e29e.js.map"
   },
   "entrypoints": [
-    "static/js/main.309cc75e.js"
+    "static/js/main.ccc9e29e.js"
   ]
 }
